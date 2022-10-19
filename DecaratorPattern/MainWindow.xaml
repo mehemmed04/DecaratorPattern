@@ -40,10 +40,10 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Name="CheckBoxs" VerticalAlignment="Center" >
-            <CheckBox Click="SmsService_Click" Name="SmsService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >SMS Service</CheckBox>
-            <CheckBox Click="FacebookService_Click" Name="FacebookService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Facebook Service</CheckBox>
-            <CheckBox Click="InstagramService_Click" Name="InstagramService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Instagram Service</CheckBox>
-            <CheckBox Click="TwitterService_Click" Name ="TwitterService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Twitter Service</CheckBox>
+            <CheckBox Name="SmsService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >SMS Service</CheckBox>
+            <CheckBox  Name="FacebookService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Facebook Service</CheckBox>
+            <CheckBox  Name="InstagramService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Instagram Service</CheckBox>
+            <CheckBox  Name ="TwitterService" Margin = "0,5" FontSize="16" FontWeight ="Bold" >Twitter Service</CheckBox>
         </StackPanel>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
@@ -69,7 +69,31 @@
         </StackPanel>
         
         <StackPanel Name="ResultStackPanel" Grid.Row="1" Grid.ColumnSpan="2">
-            
+
+            <ListView Name="ItemsListView" >
+
+
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    >
+                            <Image Width="40" Height="40" Margin="3" Source="{Binding ImagePath}">
+
+                            </Image>
+                            <TextBlock FontSize="22" Text="{Binding Message}">
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+
         </StackPanel>
         
     </Grid>

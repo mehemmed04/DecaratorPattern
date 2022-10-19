@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\instagram.png" />
+    <Resource Include="Images\sms.png" />
+    <Resource Include="Images\twitter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
